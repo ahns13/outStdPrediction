@@ -7,8 +7,8 @@ from sklearn.inspection import permutation_importance as pi
 
 
 def keyFactorExtract(vVerGbn, vUserId):
-    dsn = cx_Oracle.makedsn("61.81.234.137", 1521, "COGDW")
-    conn = cx_Oracle.connect("ansan", "ansan$#@!", dsn)  # 해당 대학 db 계정으로 변경
+    dsn = cx_Oracle.makedsn("ip", 1521, "sid")
+    conn = cx_Oracle.connect("id", "pw", dsn)  # 해당 대학 db 계정으로 변경
 
     cursor = conn.cursor()
     modify_variables, column_decimal_list, factor_list = getFactorList(cursor)
