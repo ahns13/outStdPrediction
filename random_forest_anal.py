@@ -16,8 +16,8 @@ from operator import itemgetter
 def randomForestPred(vExecType, vCondYear, vVerGbn):
     # vExecType: 모델생성/예측실행 여부(A/B)
 
-    dsn = cx_Oracle.makedsn("61.81.234.137", 1521, "COGDW")
-    conn = cx_Oracle.connect("ansan", "ansan$#@!", dsn)
+    dsn = cx_Oracle.makedsn("ip", 1521, "sid")
+    conn = cx_Oracle.connect("id", "pw", dsn)
     cursor = conn.cursor()
 
     modify_variables, factor_list = itemgetter(0, 2)(getFactorList(cursor))
